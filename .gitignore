@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.env
+.env.*
+
+# 로컬 전용 설정 (고객 비밀정보 등)
+*.local.php
+*.local.json
+
+# 크몽/고객 원본 자료 중 대용량·개인정보 (필요하면 해제)
+clients/*/_private/
+
+# WordPress Playground 로컬 데이터
+.playground/

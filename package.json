@@ -1,0 +1,11 @@
+{
+  "name": "kmong-works",
+  "version": "0.1.0",
+  "private": true,
+  "description": "크몽 판매용 템플릿형 WordPress 테마 작업 공간",
+  "scripts": {
+    "dev": "node tools/dev.js",
+    "new-client": "node tools/new-client.js",
+    "package": "node tools/package.js"
+  }
+}
