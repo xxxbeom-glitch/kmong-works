@@ -28,11 +28,17 @@ dist/                   ZIP 산출물 (git 제외)
 
 ## 테마 기술 규칙
 
-- **WordPress Classic 테마** (PHP + CSS + JS). React/Next 금지. Elementor 등 빌더는 사용자가 요청할 때만.
+- **WordPress 블록 테마** (`theme.json` + `templates/` + `parts/` + `patterns/`, 워드프레스 기본 편집기). 2026-11-02 결정.
+  - **Elementor Pro 등 유료 빌더 쓰지 않음.** Classic 테마 방식도 쓰지 않음. React/Next 금지.
+  - 고객이 기본 기능으로 직접 하는 것: 사진·글 수정, 페이지 수정·추가, 게시글(공지·소식) 관리, 메뉴 수정.
+  - 디자인 기준값(색·글꼴·여백)은 `theme.json`으로 고정 — 고객은 내용만 바꾸고 디자인은 못 깨게.
+  - 섹션은 **패턴(부품)**으로 만든다. 템플릿끼리 같이 쓰는 부품은 재사용.
+  - 문의 폼만 무료 폼 플러그인 1개 허용 (종류는 첫 템플릿 때 결정). 그 외 플러그인 추가는 사용자 확인 후.
 - CSS/JS는 `wp_enqueue_*`로만. jQuery CDN 중복 로드 금지.
 - 폰트 SUIT 기본. 모션은 필요할 때만 GSAP+ScrollTrigger, 슬라이더는 필요할 때만 Swiper.
 - 템플릿은 재판매되므로 **고객마다 바뀌는 값(상호·연락처·주소·로고·대표색·SNS)은 한곳에 모은다** — 하드코딩 흩뿌리기 금지.
-  어디에 모을지(Customizer / 옵션 페이지 / 설정 파일)는 첫 템플릿 만들 때 정하고 `docs/decisions.md`에 기록.
+  어디에 모을지(사이트 편집기 / 옵션 페이지 / 패턴 등)는 첫 템플릿 만들 때 정하고 `docs/decisions.md`에 기록.
+- 역할: 디자인 = 사용자(피그마) · 테마·패턴 개발 = Claude · 내용 수정 = 고객.
 - 고객이 관리자에서 고칠 범위는 템플릿마다 `templates/{template}/README.md`에 적는다.
 - 비밀키·비밀번호를 테마나 JS에 넣지 않는다.
 - 병원·의원 업종은 초기 대상에서 제외 (의료광고 규제).
@@ -55,7 +61,8 @@ dist/                   ZIP 산출물 (git 제외)
 - 디자인 토큰: `.cursor/sot/05-design-tokens.md` · 디자인 취향: `.cursor/sot/06-design-do-dont.md`
 - WP 보안: `.cursor/rules/71-wordpress-security.mdc` · 최종 검수: `72-wordpress-final-verify.mdc`
 - 서브페이지 구성: `.cursor/sot/04-wordpress-subpage.md`
-- 기존 테마 예시: `wordpress/template-a/` (Classic) · `wordpress/template-a-blocks/` (블록)
+- 기존 테마 예시: `wordpress/template-a-blocks/` (블록 — 출발점으로 참고) · `wordpress/template-a/` (Classic)
+- 시장조사: `docs/market-research.md` (상위 판매자는 Elementor Pro 사용 — 우리는 의도적으로 안 씀)
 
 ## git
 

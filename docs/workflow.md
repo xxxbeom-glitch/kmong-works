@@ -10,6 +10,8 @@
 
 ## B. 주문 들어왔을 때
 
+> 역할 구분 · 포함/추가 비용 · 호스팅/도메인 처리 · 고객 준비물 상세는 `service-guide.md`
+
 1. 받을 자료 체크: 상호 · 로고 · 대표색 · 연락처/주소 · 문구 · 사진 · 원하는 템플릿 · 도메인 · 카페24 WP 개설 여부
 2. `npm run new-client -- {template} {client}` → `clients/{client}/` 생성
 3. 고객 값 반영 → `npm run dev -- clients/{client}` 로 확인
