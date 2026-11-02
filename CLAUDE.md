@@ -59,5 +59,6 @@ dist/                   ZIP 산출물 (git 제외)
 
 ## git
 
-- 커밋은 사용자가 요청할 때만. push 금지(원격 없음).
+- 원격: `origin` = https://github.com/xxxbeom-glitch/kmong-works (브랜치 `main`)
+- 커밋·push는 사용자가 요청할 때만.
 - 결정이 생기면 `docs/decisions.md`에 날짜와 함께 한 줄.
